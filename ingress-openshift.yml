@@ -1,0 +1,15 @@
+  apiVersion: v1
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    name: test2
+    namespace: test200
+  spec:
+    rules:              
+    - host: test2-test200.apps.ocp4.example.com
+      http:
+       paths:
+       - path: /
+         backend:
+          serviceName: test2
+          servicePort: 8080
